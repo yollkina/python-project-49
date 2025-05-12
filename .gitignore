@@ -1,8 +1,6 @@
 .python-version
-
 *.pyc
 __pycache__/
-
+.ruff_cache
 .venv
-
 dist/
