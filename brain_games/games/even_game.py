@@ -1,11 +1,5 @@
-from random import randint
-
-from brain_games.cli import welcome_user
-
-
-def get_random_number():
-    random_number = randint(1, 65536)
-    return random_number
+from brain_games.engine import start_game
+from brain_games.utils import get_random_number
 
 
 def is_even(number):
@@ -13,20 +7,12 @@ def is_even(number):
     return "no" if answer else "yes"
 
 
+def get_even_game_question_and_answer():
+    number = get_random_number()
+    answer = is_even(number)
+    return number, answer
+
+
 def start_even_game():
-    name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    rounds = 3
-    for _ in range(rounds):
-        random_number = get_random_number()
-        player_answer = input(f'Question: {random_number}\nYour answer: ')
-        correct_answer = is_even(random_number)
-        if player_answer != correct_answer:
-            print(f"'{player_answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'.\n"
-                  f"Let's try again, {name}!")
-            break
-        else:
-            print("Correct!")
-    else:
-        print(f"Congratulations, {name}!")
+    even_game_instruction = 'Answer "yes" if the number is even, otherwise answer "no".'
+    start_game(even_game_instruction, get_even_game_question_and_answer)
