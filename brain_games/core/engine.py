@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.core.constants import rounds
+from brain_games.core.constants import ROUNDS_COUNT
 
 
 def welcome_user():
@@ -13,7 +13,7 @@ def welcome_user():
 def start_game(instruction, get_question_and_answer):
     name = welcome_user()
     print(instruction) 
-    for _ in range(rounds):
+    for _ in range(ROUNDS_COUNT):
         question, correct_answer = get_question_and_answer()
         player_answer = input(f'Question: {question}\nYour answer: ')
         if player_answer != correct_answer:

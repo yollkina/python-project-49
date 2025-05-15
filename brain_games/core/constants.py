@@ -1,1 +1,1 @@
-rounds = 3
+ROUNDS_COUNT = 3
