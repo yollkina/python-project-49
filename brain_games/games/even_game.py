@@ -14,5 +14,6 @@ def get_even_game_question_and_answer():
 
 
 def start_even_game():
-    even_game_instruction = 'Answer "yes" if the number is even, otherwise answer "no".'
+    even_game_instruction = ('Answer "yes" if the number is even, '
+                             'otherwise answer "no".')
     start_game(even_game_instruction, get_even_game_question_and_answer)
