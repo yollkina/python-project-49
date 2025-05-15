@@ -1,7 +1,7 @@
 from random import choice
 
-from brain_games.engine import start_game
-from brain_games.utils import get_random_number
+from brain_games.core.engine import start_game
+from brain_games.core.utils import get_random_number
 
 
 def get_random_math_operator():

@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.constants import rounds
+from brain_games.core.constants import rounds
 
 
 def welcome_user():
