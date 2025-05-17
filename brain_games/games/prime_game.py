@@ -3,6 +3,8 @@ from brain_games.core.utils import get_random_number
 
 
 def is_prime(number):
+    if number == 1:
+        return 'no'
     number_square_root = int(number ** 0.5)
     for div in range(2, number_square_root + 1):
         if number % div == 0:
